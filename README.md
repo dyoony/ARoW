@@ -2,6 +2,9 @@
 This repository contains the code for ICML 2023 paper "Improving adversarial robustness by putting more regularizations on less robust samples" by Dongyoon Yang, Insung Kong and Yongdai Kim.
 
 # Train
+We set regularization $2 \lambda$ in our paper to $\lambda$ in our code. i.e. for training ARow with $\lambda=3.5$ in our paper, you should run with $\lambda=7.0$.
+
+python3 main.py --loss arow --lamb 7 --swa --model wideresnet 
 
 `code`
 
