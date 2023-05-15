@@ -4,15 +4,14 @@ This repository contains the code for ICML 2023 paper "Improving adversarial rob
 # Train
 We set regularization $2 \lambda$ in our paper to $\lambda$ in our code. i.e. for training ARow with $\lambda=3.5$ in our paper, you should run with $\lambda=7.0$.
 
-python3 main.py --loss arow --lamb 7 --swa --model wideresnet 
 
-`code`
+`python main.py --loss arow --dataset cifar10 --swa --model resnet18 --lamb 7 --ls 0.2`
 
 # Evaluation
 
 The trained models can be evaluated by running eval.py which contains the standard accuracy and robust accuracies against PGD and AutoAttack.
 
-`code`
+`python eval.py --datadir {data_dir} --model_dir {model_dir} --swa --model resnet18 --attack_method autoattack`
 
 # Citation
 
