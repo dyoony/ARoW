@@ -7,6 +7,9 @@ We set regularization $2 \lambda$ in our paper to $\lambda$ in our code. i.e. fo
 
 `python main.py --loss arow --dataset cifar10 --swa --model resnet18 --lamb 7 --ls 0.2`
 
+Note that we set perturb_loss=ce is used for CIFAR-100 due to training stability.
+`python main.py --loss arow --dataset cifar100 --swa --model resnet18 --lamb 7 --ls 0.2 --perturb_loss ce`
+
 # Evaluation
 
 The trained models can be evaluated by running eval.py which contains the standard accuracy and robust accuracies against PGD and AutoAttack.
